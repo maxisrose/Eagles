@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eagle</title>
+</head>
+<body>
+	<h1>Check out this Eagle!</h1>
+
+	<a href="/"/><button>Home</button></a>
+    <%=console.log(eagles)%>
+		<p>Name: <%= eagles.name %> </p>
+		<p>Can fly: <%= eagles.fly %> </p>
+		<p>description: <%= eagles.description %> </p>
+		<a href="/eagles/<%= params.id %>/edit"/><button>edit eagle</button></a>
+
+</body>
+</html>

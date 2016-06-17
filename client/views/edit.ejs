@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Eagles</title>
+</head>
+<body>
+	<h2>Edit this Eagle</h2>
+	<form method="post" action="/eagles/<%= req.params.id %>">
+		<label>Name: <input type="text" name="name" placeholder="Name"/></label><br>
+		<label> Fly: <input type="radio" name="fly" value="true" checked="true"/>Yes <input type="radio" name="fly" value="false"/>no</label><br>
+		<label>Description: <input type="text" name="description" placeholder="Description"/></label><br>
+		<input type="submit" name="submit" value="submit"/>
+	</form>
+</body>
+</html>

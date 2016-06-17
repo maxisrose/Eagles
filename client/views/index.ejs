@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eagles</title>
+</head>
+<body>
+	<h1>Check out these Eagles!</h1>
+
+	<a href="/eagles/new"/><button>New Eagle</button></a>
+
+	<% for(var eindex in eagles){ %>
+		<p>Name: <%= eagles[eindex].name %> </p>
+		<a href="/eagles/<%= eagles[eindex].id %>"/><button>view eagle</button></a>
+		<a href="/eagles/<%= eagles[eindex].id %>/edit"/><button>edit eagle</button></a>
+		<form method="post" action="/eagles/<%=eagles[eindex].id%>/destroy">
+			<input type="submit" name="submit" value="Delete"/>
+		</form>
+		<hr>
+	<% } %>
+</body>
+</html>
